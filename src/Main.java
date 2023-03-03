@@ -51,38 +51,60 @@ public class Main {
             */
 
         // EJERCICIO 1 C:
-
+/*
 
         int numeros[] = {10, 25, 50, 71, 32, 15, 5, 23, 7, 9, 60, 81, 77, 66, 55};
-        int resultado =50 ;
-        int total = 0;
-
-
-        for (int indice = 0; indice < numeros.length; indice++) {
-            System.out.println("Los numeros son: "+numeros[indice]);
-
-            if (resultado<indice);
-            total = total + indice;
-
-            System.out.println(total);
-
-
-        }
-/*
-        {
-            for (int x = 0; x < numeros.length; x++) {
-                if (resultado > x) ;
-                resultado = x;
-                total += resultado;
-
-                System.out.println(resultado);
+       int resultado = 0;
+        int x = 50;
+        for (int ingreso : numeros) {
+            if (ingreso > x)
+            {
+                resultado +=ingreso;
             }
 
         }
+        System.out.println("El total de numeros mayor a  " +x+ " sumados es:"+resultado);
+
+
+
+
+    }
+
+}
+
 */
+
+       // EJERCICIO 2 .
+
+           String textoOriginal = "estamos en una clase de programacion en java";
+            String abecedario = "abcdefghijklmnopqrstuvwxyz ";
+            String resultado = "";
+            int desplazamiento = 2;
+
+
+            for (int i = 0; i < textoOriginal.length(); i++) {
+                char caracter = textoOriginal.charAt(i);
+
+                if (caracter == ' ') {
+                    resultado += ' ';
+                }
+
+                else {
+                    int posicionActual = abecedario.indexOf(caracter);
+                    int posicionDesplazada = (posicionActual + desplazamiento) % abecedario.length();
+                    resultado += abecedario.charAt(posicionDesplazada);
+                    }
+
+
+
+            }
+        System.out.println(resultado);
 
         }
     }
+
+
+
 
 
 
